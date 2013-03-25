@@ -4136,3 +4136,12 @@ JSIL.MakeClass($jsilcore.TypeRef("System.Object"), "System.Tuple`8", true, ["T1"
 JSIL.MakeClass($jsilcore.TypeRef("System.Object"), "System.Tuple`9", true, ["T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9"], function ($) {
 });
 
+JSIL.ImplementExternals("System.Guid", function($) {
+  $.Method({Static:true , Public:true }, "NewGuid", 
+    (new JSIL.MethodSignature($.Type, [], [])),
+    function () {
+      // FIXME: generate new GUID, perhaps using RFC4122 section 4.4
+      return JSIL.CreateInstanceOfType(System.Guid.__Type__, null);
+    }
+  );
+});
