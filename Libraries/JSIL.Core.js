@@ -1684,6 +1684,9 @@ JSIL.TypeObjectPrototype.get_IsImport = function() {
   // FIXME: return true if the type has a ComImportAttribute
   return false;
 }
+JSIL.TypeObjectPrototype.GetHashCode = function() {
+  return parseInt(this.__TypeId__);
+}
 
 // FIXME: The $...Internal version returns null if no resolution was necessary,
 //  which isn't quite as convenient. This is still pretty ugly.
