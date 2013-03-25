@@ -224,6 +224,11 @@ JSIL.ImplementExternals(
       new JSIL.MethodSignature("System.Boolean", []),
       JSIL.TypeObjectPrototype.get_IsEnum
     );
+    
+    $.Method({Static: false, Public: true}, "get_IsImport",
+      new JSIL.MethodSignature("System.Boolean", []),
+      JSIL.TypeObjectPrototype.get_IsImport
+    );
 
     $.Method({Static:false, Public:true }, "GetElementType",
       new JSIL.MethodSignature($.Type, []),

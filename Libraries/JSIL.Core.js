@@ -1680,7 +1680,10 @@ JSIL.TypeObjectPrototype.get_IsValueType = function() {
 JSIL.TypeObjectPrototype.get_IsArray = function() { 
   return this.__IsArray__; 
 }
-
+JSIL.TypeObjectPrototype.get_IsImport = function() {
+  // FIXME: return true if the type has a ComImportAttribute
+  return false;
+}
 
 // FIXME: The $...Internal version returns null if no resolution was necessary,
 //  which isn't quite as convenient. This is still pretty ugly.
